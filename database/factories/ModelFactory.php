@@ -61,7 +61,7 @@ $factory->define(HumanResources\WorkExperience::class, function (Faker\Generator
     return [
         'user_id' => 1,
         'company' => $faker->company,
-        'position' => $faker->position,
+        'position' => $faker->name,
         'job-description' => $faker->text,
         'start-date' => $faker->date($format = 'Y-m-d', $max = 'now'),
         'end-date' => $faker->date($format = 'Y-m-d', $max = 'now'),
