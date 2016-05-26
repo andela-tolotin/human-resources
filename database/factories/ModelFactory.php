@@ -29,6 +29,7 @@ $factory->define(HumanResources\Role::class, function (Faker\Generator $faker) {
 $factory->define(HumanResources\Skill::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
+        'user_id' => 1,
     ];
 });
 
@@ -46,11 +47,11 @@ $factory->define(HumanResources\Academic::class, function (Faker\Generator $fake
 $factory->define(HumanResources\OtherInfo::class, function (Faker\Generator $faker) {
     return [
         'user_id' => 1,
-        'phone'  => $faker->phone,
-        'marital_status' => $faker->status,
+        'phone'  => $faker->phoneNumber,
+        'marital_status' => $faker->titleMale,
         'address' => $faker->address,
         'dateofbirth' => $faker->date($format = 'Y-m-d', $max = 'now'),
-        'gender' => $faker->gender,
+        'gender' => $faker->title,
         'state' => $faker->state,
         'city' => $faker->city,
     ];

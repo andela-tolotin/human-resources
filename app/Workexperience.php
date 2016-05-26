@@ -14,4 +14,9 @@ class WorkExperience extends Model
         'start-date',
         'end-date',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo('HumanResources\User');
+    }
 }

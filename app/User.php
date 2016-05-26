@@ -24,23 +24,23 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public functtion role()
+    public function role()
     {
-        return $this->hasOne('HumanResources\Role')
+        return $this->hasOne('HumanResources\Role');
     }
 
-    public functtion skills()
+    public function skills()
     {
-        return $this->hasMany('HumanResources\Skill')
+        return $this->hasMany('HumanResources\Skill');
     }
 
-    public functtion otherinfo()
+    public function otherinfo()
     {
-        return $this->hasOne('HumanResources\Otherinfo')
+        return $this->hasOne('HumanResources\OtherInfo');
     }
 
-    public functtion academics()
+    public function academics()
     {
-        return $this->hasMany('HumanResources\Academic')
+        return $this->hasMany('HumanResources\Academic');
     }
 }

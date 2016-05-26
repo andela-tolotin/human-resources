@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOtherUserInfo extends Migration
+class AddTimestampToSkillsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,19 +12,10 @@ class CreateOtherUserInfo extends Migration
      */
     public function up()
     {
-        Schema::create('other-infos', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('phone');
-            $table->string('marital_status');
-            $table->text('address');
-            $table->string('dateofbirth');
-            $table->string('gender');
-            $table->string('state');
-            $table->string('city');
+        Schema::table('skills', function (Blueprint $table) {
             $table->integer('user_id')->unsigned()->default(1);
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
-
         });
     }
 
@@ -35,7 +26,7 @@ class CreateOtherUserInfo extends Migration
      */
     public function down()
     {
-        Schema::table('other-infos', function (Blueprint $table) {
+        Schema::table('skills', function (Blueprint $table) {
             //
         });
     }
