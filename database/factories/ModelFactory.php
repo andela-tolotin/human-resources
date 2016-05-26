@@ -19,3 +19,50 @@ $factory->define(HumanResources\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(HumanResources\Role::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+    ];
+});
+
+$factory->define(HumanResources\Skill::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+    ];
+});
+
+$factory->define(HumanResources\Academic::class, function (Faker\Generator $faker) {
+    return [
+        'user_id' => 1,
+        'institution' => $faker->name,
+        'grade' => $faker->name,
+        'qualification' =>  $faker->name,
+        'start-date' => $faker->date($format = 'Y-m-d', $max = 'now'),
+        'end-date' => $faker->date($format = 'Y-m-d', $max = 'now'),
+    ];
+});
+
+$factory->define(HumanResources\OtherInfo::class, function (Faker\Generator $faker) {
+    return [
+        'user_id' => 1,
+        'phone'  => $faker->phone,
+        'marital_status' => $faker->status,
+        'address' => $faker->address,
+        'dateofbirth' => $faker->date($format = 'Y-m-d', $max = 'now'),
+        'gender' => $faker->gender,
+        'state' => $faker->state,
+        'city' => $faker->city,
+    ];
+});
+
+$factory->define(HumanResources\WorkExperience::class, function (Faker\Generator $faker) {
+    return [
+        'user_id' => 1,
+        'company' => $faker->company,
+        'position' => $faker->position,
+        'job-description' => $faker->text,
+        'start-date' => $faker->date($format = 'Y-m-d', $max = 'now'),
+        'end-date' => $faker->date($format = 'Y-m-d', $max = 'now'),
+    ];
+});
