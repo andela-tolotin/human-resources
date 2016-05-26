@@ -14,13 +14,13 @@ class CreateUserAcademicDetails extends Migration
     {
         Schema::table('academics', function (Blueprint $table) {
             $table->increments('id')->default(1);
-            $table->string('institution')
-            $table->string('start-date')
-            $table->string('end-date')
-            $table->string('qualification')
-            $table->string('grade');
+            $table->string('institution');
+            $table->string('start-date');
+            $table->string('end-date');
+            $table->string('qualification');
+            $table->string('grade')
             $table->integer('user_id')->unsigned()->default(1);
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

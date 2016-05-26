@@ -14,13 +14,13 @@ class CreateUserWorkexperience extends Migration
     {
         Schema::table('workexperiences', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('company')
-            $table->string('position')
-            $table->text('job-description')
-            $table->string('start-date')
-            $table->string('end-date')
+            $table->string('company');
+            $table->string('position');
+            $table->text('job-description');
+            $table->string('start-date');
+            $table->string('end-date');
             $table->integer('user_id')->unsigned()->default(1);
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
