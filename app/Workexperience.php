@@ -4,7 +4,7 @@ namespace HumanResources;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Workexperience extends Model
+class WorkExperience extends Model
 {
     protected $fillable = [
         'user_id',
