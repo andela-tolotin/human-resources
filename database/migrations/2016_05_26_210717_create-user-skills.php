@@ -12,7 +12,7 @@ class CreateUserSkills extends Migration
      */
     public function up()
     {
-        Schema::table('skills', function (Blueprint $table) {
+        Schema::create('skills', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
         });

@@ -12,7 +12,7 @@ class CreateOtherUserInfo extends Migration
      */
     public function up()
     {
-        Schema::table('other-user-info', function (Blueprint $table) {
+        Schema::create('other-user-info', function (Blueprint $table) {
             $table->increments('id');
             $table->string('phone');
             $table->string('marital_status');
