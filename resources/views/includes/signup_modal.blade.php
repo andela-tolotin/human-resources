@@ -5,6 +5,7 @@
                 <div class="clearfix"></div>
                 <div id="social-icons-conatainer">
                     <div class="modal-body-left">
+                        <h4 class="text-center info" style="padding:2%;">COMPLETE THESE FIELDS TO SIGN UP</h4>
                         <form class="col-md-12 " method="POST" id="signUpForm">
                             {!! csrf_field() !!}
                             <div class="form-group">
@@ -31,7 +32,6 @@
                         <div class="modal-social-icons">
                             <a href="{{ url('/auth/facebook') }}" class="btn btn-default facebook"> <i class="fa fa-facebook modal-icons"></i> Sign up with Facebook </a>
                             <a href="{{ url('/auth/twitter') }}" class="btn btn-default twitter"> <i class="fa fa-twitter modal-icons"></i> Sign up with Twitter </a>
-                            <a href="/login" class="btn btn-default border custom-button-width">Log In</a>
                         </div>
                     </div>
                     <!-- <div id="center-line"></div> -->

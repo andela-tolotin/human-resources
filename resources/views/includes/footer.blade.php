@@ -16,6 +16,7 @@
     </div>
     <!--//footer--> 
     <!--smooth-scrolling-of-move-up-->
+     <script src="{{ URL::asset('js/user.js') }}"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             /*
@@ -26,6 +27,7 @@
                 easingType: 'linear' 
             };
             */
+           $("body").userPlugin();
             
             $().UItoTop({ easingType: 'easeOutQuart' });
             

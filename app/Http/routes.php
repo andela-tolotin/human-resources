@@ -14,3 +14,24 @@
 Route::get('/', function () {
     return view('index');
 });
+
+ Route::group(['prefix' => '/auth', 'middleware' => ['web']], function () {
+        Route::post('/register', 'Auth\AuthController@postRegister');
+        Route::post('/login', 'Auth\AuthController@loginUser');
+});
+
+/*
+ * This route belongs to dashboard
+ */
+Route::group(['prefix' => '/dashboard', 'middleware' => ['web']], function () {
+
+    Route::get('/', function(){
+        return view('dashboard.index');
+    });
+
+    Route::get('/logout', 'Auth\AuthController@logUserOut');
+
+    Route::get('/profile', function () {
+        return view('dashboard.pages.view_myprofile');
+    });
+});

@@ -5,7 +5,8 @@
                 <div class="clearfix"></div>
                 <div id="social-icons-conatainer">
                     <div class="modal-body-left">
-                        <form class="col-md-12 " method="POST" id="signUpForm">
+                    <h4 class="text-center info" style="padding:2%;">EXISTING USER LOGIN HERE</h4>
+                        <form class="col-md-12 " method="POST" id="logInForm">
                             {!! csrf_field() !!}
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Username" name="username" id="username">
@@ -17,7 +18,7 @@
                                 <img src="{{ URL::to('/') }}/images/preloader.gif" title="preloader" alt="preloader">
                             </div>
                             <div class="form-group">
-                                <button type="button" class="btn btn-primary" id="signup">Log In</button>
+                                <button type="button" class="btn btn-primary" id="login">Log In</button>
                             </div>
                         </form>
                     </div>
